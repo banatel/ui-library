@@ -1,0 +1,6 @@
+.alert{border:1px solid transparent;border-radius:.5rem;padding:.75rem 1rem}
+.alert__title{font-weight:600;margin-bottom:.25rem}
+.alert--info{background:#eff6ff;border-color:#bfdbfe;color:#1e3a8a}
+.alert--success{background:#ecfdf5;border-color:#a7f3d0;color:#065f46}
+.alert--warning{background:#fffbeb;border-color:#fde68a;color:#92400e}
+.alert--error{background:#fef2f2;border-color:#fecaca;color:#991b1b}

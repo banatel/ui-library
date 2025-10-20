@@ -1,0 +1,4 @@
+.datatable{width:100%;border-collapse:collapse}
+.datatable th,.datatable td{border:1px solid #e5e7eb;padding:.5rem;text-align:left}
+.datatable thead th{background:#f9fafb;font-weight:600}
+.datatable__empty{text-align:center;color:#6b7280}

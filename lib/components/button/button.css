@@ -1,0 +1,4 @@
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border:1px solid #e5e7eb;background:#fff;color:#111827;border-radius:.375rem;padding:.5rem .75rem}
+.btn--full{width:100%}
+.is-loading{cursor:progress}
+.is-disabled{opacity:.6;cursor:not-allowed}

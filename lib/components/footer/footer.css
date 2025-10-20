@@ -1,0 +1,4 @@
+.footer{display:flex;align-items:center;justify-content:space-between;min-height:56px;padding:0 1rem;border-top:1px solid #e5e7eb;background:#fff}
+.footer--sticky{position:sticky;bottom:0}
+.footer__section{display:flex;align-items:center;gap:.5rem}
+.footer__section--center{margin:0 auto}

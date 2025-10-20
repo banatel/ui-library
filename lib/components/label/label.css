@@ -1,0 +1,20 @@
+:root {
+  /* Fallbacks; replace with tokens later */
+  --label-color: #1f2937; /* gray-800 */
+  --label-font-size: 0.875rem; /* 14px */
+  --label-font-weight: 500;
+  --label-gap: 0.25rem; /* 4px */
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--label-gap);
+  color: var(--label-color);
+  font-size: var(--label-font-size);
+  font-weight: var(--label-font-weight);
+}
+
+.label__asterisk {
+  color: #dc2626; /* red-600 */
+}
