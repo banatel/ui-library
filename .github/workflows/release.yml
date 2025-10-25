@@ -4,38 +4,32 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
-permissions:
-  contents: read
-  packages: write
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  publish:
+  release:
+    name: Release
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: 'https://registry.npmjs.org'
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
+      - name: Setup pnpm 10
+        uses: pnpm/action-setup@v4
         with:
-          version: 9 # you can match your local version here
+          version: 10
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
-      - name: Build library
-        run: pnpm build
-
-      - name: Publish package
+      - name: Create release pull request
+        uses: changesets/action@v1
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm publish --access public
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
