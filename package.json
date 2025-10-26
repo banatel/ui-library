@@ -26,7 +26,10 @@
     "preinstall": "npx only-allow pnpm",
     "commit": "git-cz",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "changeset": "changeset",
+    "version": "changeset version && pnpm install --no-frozen-lockfile",
+    "release": "pnpm run build && changeset publish"
   },
   "peerDependencies": {
     "react": ">=18",
